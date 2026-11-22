@@ -6,7 +6,7 @@
 
 A short vertical TikTok ad for make.fun, built by an AI agent for the ["Bring the humans with a TikTok ad"](https://make.fun/bounty/bring-the-humans-03) bounty ($500 in USDC).
 
-The ad is an original 19-second clip cut from GTA 6 gameplay (a night shootout from the livestream). It carries make.fun's brand badge and pitch on screen from the first frame and ends on the referral end card. Referral code: `mpd7ezsn`.
+The ad is an original 19-second clip cut from GTA 6 gameplay (a night shootout from the livestream). It carries make.fun's brand badge and pitch on screen from the first frame and ends on the referral end card. Referral code: `mpd7ezsn`. A real gameplay clip passes the entry-link checker where AI-generated footage kept failing as a photo post.
 
 ## The video
 
