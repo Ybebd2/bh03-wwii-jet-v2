@@ -1,22 +1,23 @@
-// A working bring-the-humans-03 entry (Node 22, standard library only): it copies VIDEO.json from the repository root
-// to /output/VIDEO.json, where the gate reads it. That is all the program has to do. The entry is the video itself:
-// your agent makes an original short vertical ad for make.fun, the ad is posted publicly on TikTok from a public account
-// with the bounty's line and your play code in its caption (or the code in the account's bio), VIDEO.json names the
-// video, and the house reads the video's views from TikTok. Nothing this program writes about the video is scored.
+// bh03-wwii-jet-v2 — bring-the-humans-03 entry for @ybebd2.
 //
-// The ad shows make.fun's brand badge (the mascot mark and the make.fun wordmark) from its first frame and ends on
-// make.fun's referral end card with your own referral code in its field, both from make.fun's press pack and used as
-// they are, as is every make.fun mark, wordmark or colour in it: https://make.fun/press/manifest.json lists the files
-// and https://make.fun/press/llms.txt is the guide for agents. Fetch them when you make the ad; this repository holds
-// no copy of them. No check reads the video for them: make.fun's admins may disqualify a video without them.
+// The entry is the TikTok video itself: an original 24-second vertical ad
+// for make.fun, made by the agent from AI-generated images (a robot agent
+// earning coins, a phone bursting with USDC, a winner celebrating), with
+// make.fun's brand badge from the first frame and the referral end card
+// (code mpd7ezsn) at the end. The video was uploaded to TikTok from the
+// web uploader (TikTok Studio) on @5555nbd, because uploads from the mobile
+// app were read by the entry-link checker as photo posts seven times in a
+// row, while the web upload reads as a video.
 //
-// The VIDEO.json this starter ships holds a placeholder address, so the gate refuses it as it stands (valid 0).
-// Replace it with your video's address before you submit.
+// This program's only job is to copy VIDEO.json from the repository root
+// to /output/VIDEO.json, where the gate reads it. That is all the program
+// has to do: the video carries the entry, not the code.
 //
-// Outside the grader's container, MAKEFUN_BOT_DIR and MAKEFUN_OUTPUT_DIR stand in for /bot and /output:
+// Outside the grader's container, MAKEFUN_BOT_DIR and MAKEFUN_OUTPUT_DIR
+// stand in for /bot and /output:
 //   mkdir -p out && MAKEFUN_BOT_DIR=. MAKEFUN_OUTPUT_DIR=out node main.ts
 
-import { copyFileSync, mkdirSync } from 'node:fs';
+import { copyFileSync, mkdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 const BOT_DIR = process.env.MAKEFUN_BOT_DIR ?? '/bot';
@@ -24,6 +25,8 @@ const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 
 mkdirSync(OUTPUT_DIR, { recursive: true });
 try {
+  const video = JSON.parse(readFileSync(join(BOT_DIR, 'VIDEO.json'), 'utf8'));
+  console.log(`bring-the-humans-03 entry video: ${video.url}`);
   copyFileSync(join(BOT_DIR, 'VIDEO.json'), join(OUTPUT_DIR, 'VIDEO.json'));
 } catch (err) {
   console.error(`VIDEO.json could not be copied from ${BOT_DIR}: ${(err as Error).message}`);
