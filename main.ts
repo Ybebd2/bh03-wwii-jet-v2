@@ -6,7 +6,8 @@
 // first frame and the referral end card (code mpd7ezsn) at the end. The
 // video was uploaded to TikTok from the web uploader (TikTok Studio) on
 // @5555nbd, because the entry-link checker reads uploads from the mobile
-// app as photo posts, while the web upload reads as a video.
+// app as photo posts, while the web upload reads as a video. A real
+// gameplay clip passes the checker where AI-generated footage did not.
 //
 // This program's only job is to copy VIDEO.json from the repository root
 // to /output/VIDEO.json, where the gate reads it. That is all the program
