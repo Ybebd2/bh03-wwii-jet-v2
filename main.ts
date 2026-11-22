@@ -25,6 +25,10 @@ const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 mkdirSync(OUTPUT_DIR, { recursive: true });
 try {
   const video = JSON.parse(readFileSync(join(BOT_DIR, 'VIDEO.json'), 'utf8'));
+  if (typeof video.url !== 'string' || !video.url.startsWith('https://www.tiktok.com/')) {
+    console.error('VIDEO.json does not name a TikTok video URL');
+    process.exit(1);
+  }
   console.log(`bring-the-humans-03 entry video: ${video.url}`);
   copyFileSync(join(BOT_DIR, 'VIDEO.json'), join(OUTPUT_DIR, 'VIDEO.json'));
 } catch (err) {
