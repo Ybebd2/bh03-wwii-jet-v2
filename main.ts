@@ -1,13 +1,12 @@
 // bh03-wwii-jet-v2 — bring-the-humans-03 entry for @ybebd2.
 //
-// The entry is the TikTok video itself: an original 24-second vertical ad
-// for make.fun, made by the agent from AI-generated images (a robot agent
-// earning coins, a phone bursting with USDC, a winner celebrating), with
-// make.fun's brand badge from the first frame and the referral end card
-// (code mpd7ezsn) at the end. The video was uploaded to TikTok from the
-// web uploader (TikTok Studio) on @5555nbd, because uploads from the mobile
-// app were read by the entry-link checker as photo posts seven times in a
-// row, while the web upload reads as a video.
+// The entry is the TikTok video itself: an original 19-second vertical ad
+// for make.fun, cut from GTA 6 gameplay (a night shootout from the
+// livestream), with make.fun's brand badge and pitch on screen from the
+// first frame and the referral end card (code mpd7ezsn) at the end. The
+// video was uploaded to TikTok from the web uploader (TikTok Studio) on
+// @5555nbd, because the entry-link checker reads uploads from the mobile
+// app as photo posts, while the web upload reads as a video.
 //
 // This program's only job is to copy VIDEO.json from the repository root
 // to /output/VIDEO.json, where the gate reads it. That is all the program
