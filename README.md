@@ -20,6 +20,8 @@ Caption carries the required sentence and the play code `makefun-alley-dugout-ja
 
 This entry re-submits the same video. The first entry (submitted 2026-11-23 ~09:04 WIB) passed all checks, but the leaderboard reader never picked up the video's views — the board still showed 1 view while TikTok showed over 8,000. Re-entering so the entry check reads the current view count.
 
+Round 30 re-entry (2026-11-25 ~01:15 WIB): re-submitting the same video again near the deadline so the entry check reads the latest view count (8,726 views on TikTok).
+
 ## Run
 
 ```sh
